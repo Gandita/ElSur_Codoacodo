@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Normalizado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url('../assets/fonts/aileron/Aileron-Regular.otf');
+}
+
+/*Colores
+
+#283E50 
+#916A64
+#B5ECDF
+#9AD0C3
+
+*/
+
+body {
+    font-family: Aileron;
+    min-height: 100vh;
+}
+
+header {
+    min-height: 15vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+nav,
+footer,
+.offcanvas,
+.ultimos,
+.banner-elsur {
+    background-color: #283E50;
+    color: #B5ECDF;
+
+}
+
+nav,
+footer,
+.ultimos,
+.banner-elsur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*banner animacion*/
+.banner>h1 {
+    font-size: 5rem;
+}
+
+.smallerpink {
+    color: #916A64;
+    font-size: 3rem;
+    transform: translate(0, -30px);
+}
+
+
+/*Nav*/
+.navbar-toggler-icon {
+    fill: #9AD0C3;
+}
+
+.nav-link {
+    color: #9AD0C3;
+    font-weight: bold;
+}
+
+.burguer-btn {
+    border-color: #9AD0C3;
+    color: #9AD0C3;
+}
+
+/*main*/
+main {
+    min-height: 50vh;
+    display: flex;
+    flex-grow: 4;
+    background-color: beige;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.columna {
+    flex-direction: column;
+}
+
+.preguntas {
+    width: 100%;
+    text-align: center;
+}
+
+.ultimos {
+    width: 100%;
+}
+
+.figureUltimos img {
+    width: 200px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.badge:hover,
+.figureUltimos img:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+/*botones*/
+.botoncito {
+    padding: 7px 12px;
+    color: #B5ECDF;
+    background-color: #283E50;
+    border-radius: 5px;
+    margin: 1%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botoncito-claro {
+    color: #283E50;
+    background-color: #B5ECDF;
+}
+
+.botoncito:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.etiqueta {
+    padding: 5px 10px;
+    background-color: #283E50;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    color: #916A64;
+}
+
+.etiqueta:hover {
+    transition: 1s;
+    scale: 1.2;
+    color: #9AD0C3;
+}
+
+/*seccion ebooks*/
+
+.tarjeta {
+    width: 14rem;
+    height: 340px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    position: absolute;
+    width: 14rem;
+    height: 340px;
+    object-fit: cover;
+}
+
+.textotarjeta {
+    opacity: 0%;
+    width: 14rem;
+    height: 340px;
+    font-size: smaller;
+    color: #8bb3aa;
+    background-color: #283e50e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+
+.textotarjeta:hover {
+    opacity: 100%;
+}
+
+/*seccion pedidos y donaciones*/
+.formpedido{
+    width: 350px;
+    background-color: #916A64;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-weight: bold;
+}
+.banner {
+    width: 100%;
+    height: 40vh;
+    background-position: 75% 75%;
+    background-repeat: no-repeat;
+    background-color: #283E50;
+}
+
+.banner-beach {
+    background-image: url("../assets/img/ebook-beach.jpg");
+}
+
+.banner-ebook {
+    background-image: url("../assets/img/eBooks-Banner.png");
+}
+
+.fade-in-out {
+    animation: fade-in-out 7s infinite;
+}
+
+@keyframes fade-in-out {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.img-donaciones {
+    height: 10rem;
+}
+.celdaboton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Seccion reseñas */
+.cardreseña {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.cardreseña>img {
+    width: 200px;
+    object-fit: contain;
+    border: 2px double #283E50;
+}
+
+.cuadroreseña {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 400px;
+    height: max-content;
+    padding: 5px;
+    background-color: #916A64;
+    font-size: 14px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.37);
+}
+
+
+/*seccion detalles*/
+.tarjetagrande {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #283E50;
+    color: #8bb3aa;
+}
+
+.tarjetagrande img {
+    width: 45%;
+    object-fit: cover;
+}
+
+/*form*/
+.contenedorform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorform>form {
+    padding: 15px;
+    background-color: #916a64a8;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.celdaform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+    flex-grow: 5;
+
+}
+
+.celdaformsmall {
+    display: flex;
+    width: 25%;
+    text-align: center;
+    flex-grow: 5;
+}
+
+.celdaform>label {
+    padding: 5px;
+    width: 10rem;
+    text-align: start;
+    flex-grow: 1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="radio"],
+select,
+input[type="email"] {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #555555a9;
+    width: 70%;
+}
+
+/*footer*/
+footer {
+    min-height: 30vh;
+    padding: 0;
+}
+
+.firstinfooter {
+    width: 100%;
+}
+
+.footerNav,
+.footernews {
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footernews input {
+    width: 15rem;
+}
+
+.footerfoot {
+    width: 100%;
+    border-top: 1px double #916A64;
+}
+
+@media (max-width: 715px) {
+    .contenedorform>form {
+        width: 95%;
+    }
+
+    .firstinfooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerNav,
+    .footernews {
+        width: 80%;
+        border-bottom: 1px double #916A64;
+    }
+}
+
+@media (max-width: 550px) {
+    .cardreseña {
+        width: 100%;
+    }
+
+    .cardreseña>img {
+        width: 30%;
+    }
+    .cuadroreseña{
+        width: 70%;
+        font-size: 13px;
+        height: fit-content;
+    }
+    .formpedido{
+        width: 100%;
+    }
+    .celdaform {
+        flex-direction: column;
+    }
+}
